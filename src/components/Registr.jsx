@@ -116,6 +116,7 @@ function Registr() {
         marginTop={"20px"}
         textTransform={"uppercase"}
         textAlign={"center"}
+        color={'black'}
         variant="h3"
         gutterBottom
       >
@@ -138,12 +139,13 @@ function Registr() {
         <Typography
           textTransform={"uppercase"}
           textAlign={"center"}
+          color={'black'}
           variant="h4"
         >
           users data
         </Typography>{" "}
         <hr />
-        {isAlert && <Alert severity="error">{isWords}</Alert>}
+        {isAlert && <Alert severity="error" sx={{bgcolor:'pink'}}>{isWords}</Alert>}
         <Input
           inputRef={username}
           type="text"

@@ -1,6 +1,7 @@
 import { Container, Box, Input, Button, Alert } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -84,7 +85,7 @@ function Login() {
   }
 
   return (
-    <Container sx={{ width: "800px" }}>
+    <Container sx={{ width: "800px", display: 'flex', flexFlow: 'column' }}>
       <Typography
         marginTop={"20px"}
         textTransform={"uppercase"}
@@ -141,6 +142,7 @@ function Login() {
       >
        {isLoading ? 'loading...' :  'login'}
       </Button>
+      <Link style={{color: 'black', borderRadius: '8px', textDecoration: 'none', fontSize: '30px', padding: '8px 320px', marginRight: 'auto', marginLeft: 'auto', background: 'lightblue', fontSize: '32px'}} to={'/registr'}>Registr</Link>
     </Container>
   );
 }
